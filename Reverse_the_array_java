@@ -1,3 +1,4 @@
+//Reverse the array in java without using inbuilt functions
 import java.util.*;
 public class Main
 {
