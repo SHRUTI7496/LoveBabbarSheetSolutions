@@ -1,0 +1,13 @@
+//Kth smallest element
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		int arr[] = new int []{7,10,4,3,20,15};
+		Arrays.sort(arr);
+		int k=3;
+		int n = arr.length;
+		System.out.println("Min "+k+" rd Element"+" "+ arr[n-k-1]);
+			System.out.println("Max "+k+" rd Element"+" "+ arr[k]);
+	}
+}
