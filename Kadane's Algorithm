@@ -1,0 +1,22 @@
+
+
+public class Main
+{
+	public static void main(String[] args) {
+		int [] arr= new int[]{-1,-2,-3,-4};
+		int maxsum=Integer.MIN_VALUE;;
+		int csum=0;
+		for(int i=0;i<arr.length;i++){
+		    csum+=arr[i];
+		    
+		    if(csum>maxsum){
+		        maxsum=csum;
+		    }
+		    
+		    if(csum<0){
+		        csum=0;
+		    }
+		}
+	System.out.println(maxsum);
+	}
+}
