@@ -1,0 +1,33 @@
+//https://practice.geeksforgeeks.org/problems/find-the-median0527/1
+
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		int arr[] = new int[]{1,4,5,7,9,8};
+		int arr2[]= new int[]{11,14,16,19,20,21};
+		ArrayList<Integer> arrL= new ArrayList<Integer>();
+		for(int i =0;i<arr.length;i++){
+		arrL.add(arr[i]);
+		}
+		
+		for(int j =0;j<arr2.length;j++){
+		arrL.add(arr2[j]);
+		}
+		System.out.println(arrL);
+		if(arrL.size()%2==0){
+		    int median2=arrL.get((arrL.size()/2)-1);
+		int median= arrL.get(arrL.size()/2);
+		System.out.println(median2);
+		System.out.println(median);
+		
+		    
+		}
+		else{
+		    int median= arrL.get((arrL.size()/2));
+		System.out.println(median);
+		}
+	}
+}
