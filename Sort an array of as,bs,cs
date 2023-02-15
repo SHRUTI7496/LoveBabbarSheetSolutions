@@ -1,0 +1,42 @@
+class HelloWorld {
+    public static void main(String[] args) {
+   
+	 char A[] = new char []{'a','c','b','c','a'};
+		int n= A.length;
+		int i = 0 ,  countzero = 0 , countone = 0 ,  counttwo = 0 ;  
+    while ( i < n )  
+    {  
+        if ( A [ i ] == 'a' )  
+        {  
+            countzero = countzero + 1 ;  
+        }  
+        else if ( A [ i ] =='b'  )  
+        {  
+            countone = countone + 1 ;  
+        }  
+        else  
+        {  
+            counttwo = counttwo + 1;  
+        }  
+        i = i + 1 ;  
+    }  
+    for  ( i = 0 ; i < countzero ; i++ )  
+    {  
+        A [ i ] = 'a' ;  
+    }  
+    for ( i = countzero ; i < countzero + countone ; i++ )  
+    {  
+        A [ i ] = 'b' ;  
+    }  
+    for ( i = countzero + countone ; i < n ; i++ )  
+    {  
+        A [ i ] = 'c' ;  
+    }  
+ 
+ for ( i = 0 ; i < n ; i++ )  
+    {  
+        System.out.println (A [ i ] +" ") ;  
+    }  
+}
+}
+    
