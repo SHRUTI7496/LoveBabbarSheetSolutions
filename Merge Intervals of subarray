@@ -1,0 +1,43 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int[][] arr= {{1,4},{4,5}};
+	    Arrays.sort(arr,(a,b)-> Integer.compare(a[0],b[0]));
+	    Stack<int[]> st= new Stack();
+	    st.add(arr[0]);
+	    for(int i=1;i<arr.length;i++){
+	        int startpoint2=arr[i][0];
+	        int endpoint2= arr[i][1];
+	        
+	        int [] arrpop= st.pop();
+	          int startpoint1=arrpop[0];
+	        int endpoint1= arrpop[1];
+	        
+	       int endmax= Math.max(endpoint1,endpoint2);
+	        
+	        if(endpoint1>=startpoint2){
+	            int[] merge=new int[]{startpoint1,endmax};
+	            st.add(merge);
+	        }
+	        else{
+	            st.add(arrpop);
+	            st.add(arr[i]);
+	        }
+	        
+	    }
+	    
+	    int [][] output= new int[st.size()][2];
+	    for(int i=output.length-1;i>=0;i--){
+	       int[]poparray=st.pop();
+	       output[i][0]=poparray[0];
+	       output[i][1]=poparray[1];
+	       
+	    }
+	  for(int i=0;i<output.length;i++){
+	      for(int j=0;j<2;j++){
+	     System.out.println(output[i][j]);
+	  }
+	  }
+	}
+}
