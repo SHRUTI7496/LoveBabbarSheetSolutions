@@ -1,0 +1,29 @@
+#https://practice.geeksforgeeks.org/problems/palindromic-array-1587115620/1
+
+class GfG
+{
+	public static int palinArray(int[] a, int n)
+           {int rev=0;int r;int b=0;
+                
+	a:
+                 for(int i:a){
+                     rev=0;
+                     int temp=i;
+                     while(i>0){
+                      r= i%10;
+                     
+                     rev= rev*10+r;
+                   
+                     i=i/10;}
+                     if(rev==temp){
+                         b=1;
+                      
+                     }
+                     else{
+                         b=0;
+                         break a;
+                     }
+                 }
+                 return b;
+           }
+}
